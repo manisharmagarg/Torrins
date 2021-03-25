@@ -1,14 +1,108 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html>
-<head>
-	<title></title>
-</head>
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign In - Torrins</title>
+      
+      <!--favicon-->
+      <link rel="stylesheet" type="image/x-icon" href="{% static 'assets/images/staffpot.png' %}">
+
+      <!--common css-->
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/fonts.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/common.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/forms.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+   </head>
 <body>
-<form method="post">
-	{% csrf_token %}
-	<input type="text" name="email">
-	<input type="password" name="password">
-	<button>submit</button>
-</form>
+	<!---->
+	<div class="mainBody">
+         <div class="pageWrapper">
+            <div class="pageBody">
+               <section class="loginPage">
+                  <div class="loginInner">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-4 col-md-4 pd-0">
+                              <div class="loginDesc">
+                                 <div class="loginInnerDiv">
+                                    <div class="loginLogo"><img src="{% static 'assets/images/staffpot.png' %}" alt="image"/></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-8 col-md-8 pd-0">
+                              <div class="loginForm">
+                                 <div class="row">
+                                    <div class="col-sm-12">
+										<h1>Sign In </h1>
+                                    </div>
+                                 </div>
+                                 <form method="post" class="was-validated1">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                       <div class="col-sm-12">
+                                          <div class="form-group">
+                                             <input type="email" name="email" class="form-control" required placeholder="Email">
+                                          </div>
+                                          <div class="form-group">
+                                             <input type="password" name="password" class="form-control" required placeholder="Password">
+                                          </div>
+                                          <div class="form-group">
+                                             <button type="submit" class="btn btn-primary commonBtn" id="btnLogin">Login</button>
+                                          </div>
+										   <div class="clearfix">
+												<a href="#" class="float-right">Forgot Password?</a>
+											</div>
+                                       </div>
+                                    </div>
+                                 </form>
+									<div class="row omb_socialButtons">
+										<div class="col-sm-12">
+											<hr class="kpx_hrOr">
+											<span class="kpx_spanOr">or</span>
+										</div>
+									<div class="col-md-4  mb-2">
+									<a href="#" class="btn btn-lg btn-block omb_btn-google">
+											<i class="fa fa-google visible-xs"></i>
+											<span class="hidden-xs">Google</span>
+										</a>	
+									</div>
+									<div class="col-md-4  mb-2">
+										<a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+											<i class="fa fa-linkedin visible-xs"></i>
+											<span class="hidden-xs">Linkedin</span>
+										</a>
+									</div>	
+									<div class="col-md-4  mb-2">
+										<a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+											<i class="fa fa-facebook visible-xs"></i>
+											<span class="hidden-xs">Facebook</span>
+										</a>
+										
+									</div>	
+									<div class="col-sm-12">
+                                        <hr>
+                                        </div>
+									<div class="col-sm-12">
+										<div class="formHead">
+										  <p>Don't have an account? <a href="/accounts/register/">Sign Up</a></p>
+										</div>
+								   </div>
+								</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            </section>
+         </div>
+      </div>
+      </div>
+	<!---->
+	
 </body>
 </html>

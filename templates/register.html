@@ -1,0 +1,143 @@
+{% load static %}
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Register - Torrins</title>
+      <!--favicon-->
+      <link rel="stylesheet" type="image/x-icon" href="{% static 'assets/images/staffpot.png' %}">
+      <!--common css-->
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/fonts.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/common.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/forms.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+   </head>
+   <body>
+      <!---->
+      <div class="mainBody">
+         <div class="pageWrapper">
+            <div class="pageBody">
+               <section class="loginPage">
+                  <div class="loginInner">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-4 col-md-4 pd-0">
+                              <div class="loginDesc">
+                                 <div class="loginInnerDiv">
+                                    <div class="loginLogo"><img src="{% static 'assets/images/staffpot.png' %}" alt="image"/></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-8 col-md-8 pd-0">
+                              <form method="post">
+                                {% csrf_token %}
+
+                                  <div class="loginForm">
+                                     <div class="row">
+                                        <div class="col-sm-12 text-center mb-4">
+                                           <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                              <label class="btn btnGrey signup school_tab btn-lg active">
+                                              <input type="radio" name="role" id="option1" value="school" autocomplete="off" checked onclick="textChange('school');"> Sign Up As School
+                                              </label>
+                                              <label class="btn btnGrey signup teacher_tab btn-lg ">
+                                              <input type="radio" name="role" id="option2" value="teacher" autocomplete="off" onclick="textChange('teacher');"> Sign Up As Teacher
+                                              </label>
+                                           </div>
+                                        </div>
+                                     </div>
+                                        <div class="row">
+                                           <div class="col-sm-12">
+                                              <div class="form-group">
+                                                 <input type="text" name="school_name" class="form-control" placeholder="School Name">
+                                                 <input type="text" name="first_name" class="form-control d-none mb-3" placeholder="First Name">
+                                                 <input type="text" name="last_name" class="form-control d-none" placeholder="Last Name">
+                                              </div>
+                                              <div class="form-group">
+                                                 <input type="email" name="email" class="form-control" required placeholder="Email">
+                                              </div>
+                                              <div class="form-group phone-number">
+                                                 <input type="text" name="phone" class="form-control" required placeholder="Mobile Number">
+                                                 <span>+91</span>
+                                              </div>
+                                              <div class="form-group">
+                                                 <input type="password" name="password" class="form-control" required placeholder="Password">
+                                              </div>
+                                              <div class="form-group">
+                                                 <input type="password" name="confirm_password" class="form-control" required placeholder="Confirm Password">
+                                              </div>
+                                              <div class="form-group">
+                                                 <button type="submit" class="btn btn-primary commonBtn" id="btnLogin">Register</button>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     <div class="row omb_socialButtons">
+                                        <div class="col-sm-12">
+                                           <hr class="kpx_hrOr">
+                                           <span class="kpx_spanOr">or</span>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                           <a href="#" class="btn btn-lg btn-block omb_btn-google">
+                                           <i class="fa fa-google visible-xs"></i>
+                                           <span class="hidden-xs">Google</span>
+                                           </a> 
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                           <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+                                           <i class="fa fa-linkedin visible-xs"></i>
+                                           <span class="hidden-xs">Linkedin</span>
+                                           </a>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                           <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+                                           <i class="fa fa-facebook visible-xs"></i>
+                                           <span class="hidden-xs">Facebook</span>
+                                           </a>
+                                        </div>
+                                        <div class="col-sm-12">
+                                           <hr>
+                                        </div>
+                                        <div class="col-sm-12">
+                                           <div class="formHead">
+                                              <p>Have an account? <a href="/accounts/login/">Sign In </a></p>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            </section>
+         </div>
+      </div>
+      </div>
+      <!---->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript">
+         function textChange(id){
+         if(id=='school'){
+             $('.teacher_tab').removeClass('active');
+             $('.school_tab').addClass('active');
+             $('[name=school_name]').removeClass('d-none');
+             $('[name=first_name]').addClass('d-none');
+             $('[name=last_name]').addClass('d-none');
+         }else{
+            $('.teacher_tab').addClass('active');
+            $('.school_tab').removeClass('active');
+             $('[name=school_name]').addClass('d-none');
+             $('[name=first_name]').removeClass('d-none');
+             $('[name=last_name]').removeClass('d-none');
+         }
+         $('input[type=text]').val('');
+         $('.is-invalid').removeClass('is-invalid');
+         $('.invalid-feedback').addClass('d-none');
+         }
+         
+      </script>
+   </body>
+</html>

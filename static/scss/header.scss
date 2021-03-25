@@ -1,0 +1,208 @@
+.header{
+		height: 65px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 97;
+		background-color: #ffffff;
+	    left: 265px;
+		@media (max-width:991px){
+		  left:0px;
+		   display:none;
+			&.show{
+			display: block;
+			top: 55px;
+			height: 50px;
+				@media only screen and (max-width:640px){
+					height: auto;
+					    padding: 10px 0;
+				}
+			}
+		 }
+		.headerInner{
+		 height:100%;
+		 .topbar {
+			display: flex;
+            justify-content: space-between;
+			width:100%;
+			 .navbar{
+				 width: 100%;
+				 padding: 0;
+				 .navbar-nav{
+					 @media only screen and (max-width:640px){
+						 flex-direction:row;
+					 }
+					 .nav-item{
+						 .nav-link{
+							background: #F2F2F2;
+							border-radius: 50px;
+							margin: 0 14px 0 0;
+							width: 35px;
+							height: 35px;
+						   text-align: center;
+							 position: relative;
+							 i {
+								font-size: 17px;
+								color: #000;
+								position: relative;
+								top: 1px;
+								left: 2px;
+							}
+							 .value{
+								background-color: #40189D;
+								color: #fff;
+								width: 22px;
+								height: 22px;
+								position: absolute;
+								top: -10px;
+								border-radius: 50px;
+								line-height: 22px;
+								text-align: center;
+								right: -8px;
+							 }
+						 }
+						 &:last-child{
+							 .nav-link{
+								background:transparent; 
+								 padding:0px;
+							 } 
+						 }
+						.dropdown-menu{
+							    left: -52px;
+							.dropdown-toggle{
+								&:after{
+								 display:none;
+								}
+							}
+							.dropdown-item{
+							    padding: 3px 12px;
+								color: #777;
+								display: block;	
+							} 
+						 }
+						 	 .dropdown{
+								 .dropdown-toggle{
+									 img{
+										width: 34px;
+									 }
+								 } 
+								 .show-notification {
+								    background: #fff;
+									-webkit-box-shadow: 0 2px 30px 6px rgba(0, 0, 0, 0.1);
+									box-shadow: 0 2px 30px 6px rgba(0, 0, 0, 0.1);
+									position: absolute;
+									-webkit-transition: all 0.3s ease-in-out;
+									transition: all 0.3s ease-in-out;
+									width: 24rem;
+									right: 0px;
+									top: 75px;
+									left: auto;
+									overflow: visible;
+									border: none;	
+									 &:after{
+										content: "";
+										position: absolute;
+										top: -10px;
+										right: 30px;
+										-webkit-transform: rotate(45deg);
+										transform: rotate(45deg);
+										border: 10px solid #fff;
+										border-right-color: transparent;
+										border-bottom-color: transparent;
+										-webkit-box-shadow: -10px -9px 23px 1px rgba(0, 0, 0, 0.1);
+										box-shadow: -10px -9px 23px 1px rgba(0, 0, 0, 0.1);
+									 }
+									 
+							&.profile-notification {
+								width:24em!important;
+								.user-details {
+									border-bottom: 1px solid rgba(66, 59, 116, 0.15);
+									padding: 1rem!important;
+									.media {
+										.avatar {
+											img {
+												width: 50px;
+												height: 50px;
+												border-radius: 50%;
+											}
+										}
+										.media-body {
+											.user-title {
+												font-size: 14px;
+												color: #000;
+												font-weight: 600;
+												margin-bottom: 2px;
+											}
+											.user-subtitle {
+												font-size: 13px;
+												color: #585858;
+												margin-bottom: 0;
+											}
+										}
+									}
+								}
+								.dropdown-item {
+									padding: .70rem 1.5rem;
+									color: #505050;
+									border-bottom: 1px solid #eee;
+									font-size: 15px;
+									&:last-child {
+										border-bottom: 0px;
+									}
+								}
+							}
+								 }
+	
+						
+							 }
+					 } 
+					 .input-group{
+				        border: 1px solid #ddd;
+						border-radius: 20px;
+						padding: 4px;
+					      .search-panel{
+							  border-right: 1px solid #eee;
+							  border-left: 0px solid #eee!important;
+							  .dropdown-menu{
+								  li{
+									  a{
+				                       padding: 3px 12px;
+									   color: #777;
+									    display: block;
+										  &:hover{
+											  text-decoration:none;
+										  }
+									  }
+								  }
+							  }
+							  .btn{
+								  &:after{
+									 display:none;
+								  }
+							  }
+							}
+						 .form-control{
+							    border: 0px;
+								height: auto;
+								background: transparent;
+						 }
+							.input-group-btn {
+								border-left: 1px solid #ddd;
+							}
+					 }
+				 } 
+				 .searchBox{
+				    width: 100%;
+					    padding: 0 42px 0 0;
+					 @media only screen and (max-width:640px){
+						max-width: 100%;
+						     margin: 0 0 15px 0;
+						 
+					 }
+				 }
+			 }
+
+		}
+	  } 
+	}

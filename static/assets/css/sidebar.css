@@ -1,0 +1,138 @@
+.aside {
+  background-color: #fff;
+  width: 265px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+  transition: 0.5s; }
+  @media (max-width: 991px) {
+    .aside {
+      left: -265px; }
+      .aside.show {
+        left: 0px; } }
+  .aside .brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 10px 25px;
+    height: 80px; }
+    .aside .brand .brand-toggle:focus {
+      outline: none;
+      box-shadow: none; }
+  .aside .aside-menu-wrapper {
+    height: 100%;
+    overflow-y: auto; }
+    .aside .aside-menu-wrapper .br-sideleft {
+      margin: 20px 0; }
+      .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu {
+        padding: 0px;
+        list-style: none;
+        margin: 0px; }
+        .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li {
+          display: block;
+          list-style: outside none none;
+          margin: 0;
+          padding: 0;
+          position: relative; }
+          .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a {
+            text-align: left;
+            padding: 15px 25px;
+            display: block;
+            color: #BFBFBF;
+            font-size: 14px;
+            position: relative;
+            transition: 0.5s;
+            cursor: pointer;
+            min-height: 44px;
+            font-family: 'poppinssemibold'; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a:hover {
+              text-decoration: none;
+              color: #40189D;
+              background-color: #F2F2F2;
+              transition: background-color 0.3s; }
+              .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a:hover .icon svg path {
+                fill: #40189D; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a .icon {
+              padding: 0 7px 0 0; }
+              .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a .icon svg path {
+                fill: #BFBFBF; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a .menuItem {
+              position: relative;
+              top: 3px; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a .menu-arrow {
+              position: absolute;
+              right: 15px;
+              top: 50%;
+              padding: 5px 15px;
+              z-index: 999;
+              cursor: pointer;
+              transform: translateY(-50%); }
+              .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li a .menu-arrow:after {
+                font-family: FontAwesome;
+                content: "\f105";
+                transform: translateY(-50%); }
+          .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown {
+            display: none;
+            padding: 0 0 0 25px; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown.show {
+              display: block; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown li a {
+              background-color: transparent;
+              color: #000;
+              display: flex; }
+              .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown li a:hover {
+                text-decoration: none;
+                color: #fff;
+                background-color: #89699b;
+                transition: background-color 0.3s; }
+                .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown li a:hover .menu-bullet span {
+                  background-color: #fff; }
+              .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown li a .menuItem {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                padding: 0; }
+              .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown li a .menu-bullet {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                line-height: 0;
+                vertical-align: middle;
+                text-align: left;
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 15px;
+                flex: 0 0 15px; }
+                .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li .subDropdown li a .menu-bullet span {
+                  width: 5px;
+                  height: 1px;
+                  background-color: #5c5e81;
+                  vertical-align: middle;
+                  display: inline-block; }
+          .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li.active a {
+            color: #40189D;
+            background-color: #F2F2F2;
+            transition: background-color 0.3s; }
+            .aside .aside-menu-wrapper .br-sideleft .br-sideleft-menu li.active a .icon svg path {
+              fill: #40189D; }
