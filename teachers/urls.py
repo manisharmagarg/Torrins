@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (
-    SchoolDashboard,
+    TeachaerDashboard,
     # EmailConformationView,
     # LoginView,
     # PasswordResetApiView,
@@ -13,8 +13,8 @@ from .views import (
 urlpatterns = [
     path(
         'dashboard/',
-        SchoolDashboard.as_view(),
-        name='school_dashboard',
+        TeachaerDashboard.as_view(),
+        name='teachaer_dashboard',
     ),
     # path(
     #     'email-conformation/<str:activation_key>/',

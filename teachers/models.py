@@ -1,6 +1,7 @@
 from django.db import models
 from utils.base_models import BaseModel
 from django.contrib.auth import get_user_model
+from accounts.models import Role
 
 User = get_user_model()
 
@@ -135,3 +136,16 @@ class TeacherProfiles(BaseModel):
 
 	class Meta:
 		db_table = 'teacher'
+
+
+
+class SideBarMenus(BaseModel):
+	menu = models.CharField(max_length=255, null=True, blank=True)
+	slug = models.CharField(max_length=255, null=True, blank=True)
+	sortorder = models.IntegerField(null=True, blank=True)
+	parent = models.BigIntegerField(null=True, blank=True)
+	role = models.IntegerField(null=True, blank=True)
+	icon = models.CharField(max_length=255, null=True, blank=True)
+	active = models.IntegerField(null=True, blank=True)
+	class Meta:
+		db_table = 'sidebar_menus'

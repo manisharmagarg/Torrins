@@ -32,6 +32,8 @@
     .aside .brand .brand-toggle:focus {
       outline: none;
       box-shadow: none; }
+    .aside .brand .brand-logo img {
+      max-width: 100%; }
   .aside .aside-menu-wrapper {
     height: 100%;
     overflow-y: auto; }

@@ -5,7 +5,7 @@ from .views import (
     # EmailConformationView,
     LoginView,
     # PasswordResetApiView,
-    # LogOutView,
+    LogOutView,
     # UserDetailApiView
 )
 
@@ -35,7 +35,7 @@ urlpatterns = [
     # 	UserDetailApiView.as_view(),
     #     name='user-detail',
     # ),
-    # path('logout/', 
-    #     LogOutView.as_view()
-    # ),
+    path('logout/', 
+        LogOutView.as_view()
+    ),
 ]
