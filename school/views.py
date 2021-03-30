@@ -11,8 +11,6 @@ def school_side_bar_menus(request):
 	return context
 
 
-
-
 class SchoolDashboard(LoginRequiredMixin, View):
 	context = dict()
 	def get(self, request, *args, **kwargs):
