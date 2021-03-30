@@ -27,7 +27,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("Django_SECRET_KEY")
+SECRET_KEY = os.getenv("Django_SECRET_KEY", "^$$mc&@(yw7y89#oritj6$gzkjb5&a+@run31sh03!cpjsp&os")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

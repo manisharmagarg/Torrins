@@ -1,0 +1,1567 @@
+{% extends "base.html" %}
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+	<div id="kt_content" class="content d-flex flex-column flex-column-fluid">
+	  <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+	     <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+	        <div class="d-flex align-items-center flex-wrap mr-2">
+	           <div class="d-flex align-items-center flex-wrap mr-1">
+	              <div class="d-flex align-items-baseline flex-wrap mr-5">
+	                 <ul class="breadcrumb p-0 my-2 font-size-sm">
+	                    <li class="breadcrumb-item"><a href="#"> My Profile </a></li>
+	                    <li class="breadcrumb-item">Edit Profile</li>
+	                 </ul>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	  </div>
+	  <div class="container-fluid">
+	     <div class="row">
+	        <!---->
+	        <div class="col-sm-12">
+	           <div class="bgWhite">
+	              <div class="row" style="display:block;">
+	                 <div class="col-sm-12">
+	                    <div class="setpperInfo">
+	                       <div class="EditProfile fs-16">Edit Profile</div>
+	                       <div class="profile">
+	                          <div class="publishData">
+	                             <h5>Publish Profile</h5>
+	                             <label class="switch">
+	                             <input type="checkbox">
+	                             <span class="slider round"></span>
+	                             </label>
+	                          </div>
+	                          <button class="btn btnGrey mr-1">Cancel</button>
+	                          <button class="btn btnBlue">Save Changes</button>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <!--stepper-->
+	                    <div class="stepperFormSection">
+	                       <ul class="stepper horizontal" id="horizontal-stepper">
+	                          <li class="step active">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <div class="row">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Generals</label></div>
+	                                   </div>
+	                                </div>
+	                                <div class="row">
+	                                   <div class="col-sm-8">
+	                                      <div class="row">
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>First Name</label>
+	                                               <input type="text" class="form-control" placeholder="First Name"/>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Last Name</label>
+	                                               <input type="text" class="form-control" placeholder="Last Name"/>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Date of Birth</label>
+	                                               <input type="date" class="form-control"/>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Gender</label>
+	                                               <label class="radioCont">Male
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+	                                               <label class="radioCont">Female
+	                                               <input type="radio" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Position Applying For</label>
+	                                               <select class="form-control">
+	                                                  <option value="0"> Choose Position</option>
+	                                                  <option value="1">P.G.T– Post Graduate Teacher </option>
+	                                                  <option value="1">TGT – Trained Graduate Teacher </option>
+	                                                  <option value="1">Librarian </option>
+	                                                  <option value="1">Special Educator </option>
+	                                               </select>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Years of Experience</label>
+	                                               <select class="form-control">
+	                                                  <option value="0">Select Experience</option>
+	                                                  <option value="0">0 years</option>
+	                                                  <option value="0">1 years</option>
+	                                                  <option value="0">2 years</option>
+	                                                  <option value="0">3 years</option>
+	                                               </select>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Marital Status</label>
+	                                               <select class="form-control">
+	                                                  <option value="0">Select Marital Status</option>
+	                                                  <option value="0">Married</option>
+	                                                  <option value="0">Unmarried</option>
+	                                                  <option value="0">Single</option>
+	                                                  <option value="0">Others</option>
+	                                               </select>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-6">
+	                                            <div class="form-group">
+	                                               <label>Number of Children</label>
+	                                               <select class="form-control">
+	                                                  <option value="0">Select Children</option>
+	                                                  <option value="0">0</option>
+	                                                  <option value="0">1</option>
+	                                                  <option value="0">2</option>
+	                                                  <option value="0">3</option>
+	                                               </select>
+	                                            </div>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="uploadPhoto">
+	                                         <div class="uploadInner">
+	                                            <div id="mybutton">
+	                                               <input type="file" name="photo" id="upload-photo" />
+	                                               <label for="upload-photo"><i aria-hidden="true" class="fa fa-upload"></i>Upload Photo</label>
+	                                            </div>
+	                                         </div>
+	                                         <div>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="row">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Contact</label></div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>MobilePhone</label>
+	                                         <div class="input-group mb-3">
+	                                            <div class="input-group-prepend">
+	                                               <span class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i></span>
+	                                            </div>
+	                                            <input type="text" class="form-control" placeholder="Mobile Phone">
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>Whatsapp</label>
+	                                         <div class="input-group mb-3">
+	                                            <div class="input-group-prepend">
+	                                               <span class="input-group-text"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+	                                            </div>
+	                                            <input type="text" class="form-control" placeholder="Whatsapp">
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>Email</label>
+	                                         <div class="input-group mb-3">
+	                                            <div class="input-group-prepend">
+	                                               <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+	                                            </div>
+	                                            <input type="text" class="form-control" placeholder="Email">
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>Address</label>
+	                                         <input type="text" class="form-control"/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>Country</label>
+	                                         <select class="form-control">
+	                                            <option value="0">Select Country</option>
+	                                            <option value="0">India</option>
+	                                            <option value="0">Canada</option>
+	                                            <option value="0">Australia</option>
+	                                            <option value="0">Uk</option>
+	                                         </select>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>State</label>
+	                                         <select class="form-control">
+	                                            <option value="0">Select State</option>
+	                                            <option value="0">Haryana</option>
+	                                            <option value="0">Punjab</option>
+	                                            <option value="0">Goa</option>
+	                                            <option value="0">Himachal Pradesh</option>
+	                                         </select>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>City</label>
+	                                         <select class="form-control">
+	                                            <option value="0">Select City</option>
+	                                            <option value="0">Ambala</option>
+	                                            <option value="0">Kurukshetra</option>
+	                                            <option value="0">Karnal</option>
+	                                            <option value="0">Panipat</option>
+	                                         </select>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>District</label>
+	                                         <select class="form-control">
+	                                            <option value="0">Select District</option>
+	                                            <option value="0">Thanesar</option>
+	                                         </select>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-4">
+	                                      <div class="form-group">
+	                                         <label>Pincode</label>
+	                                         <input type="text" class="form-control"/>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions text-right">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                </div>
+	                             </div>
+	                          </li>
+	                          <li class="step">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <div class="row">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Education details</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="subTitle">
+	                                         <p>Add the schools you attended, areas of study, and degrees earned.</p>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="detail">
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEducation"><i class="fa fa-plus"></i> Add Class X/Metric</a></div>
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEducation"><i class="fa fa-plus"></i>  Add Class XII/Post Metric</a></div>
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEducation"><i class="fa fa-plus"></i>  Add Graduation</a></div>
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEducation"><i class="fa fa-plus"></i>  Add Post Education</a></div>
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEducation"><i class="fa fa-plus"></i>  Add Professional Degree</a></div>
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEducation"><i class="fa fa-plus"></i>  Add M.phil/PHD</a></div>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                   <button class="btn btnCss btn-secondary previous-step"><i class="fa fa-angle-double-left"></i> Previous</button>
+	                                </div>
+	                             </div>
+	                          </li>
+	                          <li class="step">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <div class="row">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Subjects & Specialization</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="subTitle">
+	                                         <h2>Tell us about the work you do</h2>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="row">
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Primary Subject you teach?</label> 
+	                                         <select class="form-control">
+	                                            <option value="0">Choose Subjects</option>
+	                                            <option value="0">Science</option>
+	                                            <option value="0">Maths</option>
+	                                            <option value="0">English</option>
+	                                         </select>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Select the Standards taught</label> 
+	                                         <div class="selecttaught">
+	                                            <div class="selectStandard"><a href="#">Pre-Nursery</a></div>
+	                                            <div class="selectStandard"><a href="#">Nursery</a></div>
+	                                            <div class="selectStandard"><a href="#">Kindergarten </a></div>
+	                                            <div class="selectStandard"><a href="#">1st Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">2nd Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">3rd Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">4th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">5th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">6th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">7th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">8th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">9th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">10th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">11th Standard</a></div>
+	                                            <div class="selectStandard"><a href="#">12th Standard</a></div>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Secondary subjects you can teach?</label> 
+	                                         <input value="Physics, Chemistry, Biology " name="tags3" class="form-control" />
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Secondary/Co-curricular Activity</label> 
+	                                         <input value="Academic Teams, Theatre, Cultural Activities " name="tags4" class="form-control" />
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                   <button class="btn btnCss btn-secondary previous-step"><i class="fa fa-angle-double-left"></i> Previous</button>
+	                                </div>
+	                                <!---->
+	                             </div>
+	                          </li>
+	                          <li class="step">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <!---->
+	                                <div class="row">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Employment details</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="subTitle">
+	                                         <h2>Add your past work experience</h2>
+	                                         <p>Build your credibility by showcasing the projects & jobs you have completed.</p>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="detail">
+	                                         <div class="addDetail"><a data-toggle="modal" data-target="#myModalEmployment"><i class="fa fa-plus"></i> Add Employment</a></div>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                   <button class="btn btnCss btn-secondary previous-step"><i class="fa fa-angle-double-left"></i> Previous</button>
+	                                </div>
+	                                <!---->
+	                             </div>
+	                          </li>
+	                          <li class="step">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <!---->
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Tell us about Yourself</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Tell About You(word limit 200)</label>  
+	                                         <textarea class="form-control"></textarea>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Upload Video</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Upload introduction video (1 min.)</label>
+	                                         <div class="profileListing">
+	                                            <ul>
+	                                               <li>Video Uploaded <span class="download"><i class="fa fa-download"></i></span>
+	                                                  <span class="closeIcon"><i class="fa fa-close"></i></span>
+	                                               </li>
+	                                            </ul>
+	                                         </div>
+	                                         <button class="btn btnGrey grayBtn">Upload Video</button>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Certificates</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <div class="profileListing">
+	                                            <ul>
+	                                               <li>Uploaded X/Metric <span class="download"><i class="fa fa-download"></i></span>
+	                                                  <span class="closeIcon"><i class="fa fa-close"></i></span>
+	                                               </li>
+	                                            </ul>
+	                                         </div>
+	                                         <div class="certificate">
+	                                            <button class="btn btnGrey grayBtn">Upload X/Metric</button>
+	                                            <button class="btn btnGrey grayBtn">Upload XII/Post Metric</button>
+	                                            <button class="btn btnGrey grayBtn">Upload Graduation</button>
+	                                            <button class="btn btnGrey grayBtn">Upload Post Graduation</button>
+	                                            <button class="btn btnGrey grayBtn">Upload Others</button>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>ID Proofs</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <div class="profileListing">
+	                                            <ul>
+	                                               <li>Uploaded Aadhar Card<span class="download"><i class="fa fa-download"></i></span>
+	                                                  <span class="closeIcon"><i class="fa fa-close"></i></span>
+	                                               </li>
+	                                            </ul>
+	                                         </div>
+	                                         <div class="certificate">
+	                                            <button class="btn btnGrey grayBtn">Upload Aadhar Card</button>
+	                                            <button class="btn btnGrey grayBtn">Upload PAN Card</button>
+	                                            <button class="btn btnGrey grayBtn">Upload Passport</button>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                   <button class="btn btnCss btn-secondary previous-step"><i class="fa fa-angle-double-left"></i> Previous</button>
+	                                </div>
+	                                <!---->
+	                             </div>
+	                          </li>
+	                          <li class="step">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <!---->
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Training/Certifications</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="publishProfile pad">
+	                                         <div class="publishData">
+	                                            <h5>Are you a qualified CTET(Central Teachers Eligibility Test) teacher? </h5>
+	                                            <label class="switch">
+	                                            <input type="checkbox">
+	                                            <span class="slider round"></span>
+	                                            </label>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+										<div class="col-sm-12">
+										<div class="selecttaught mb-3">
+	                                            <div class="selectStandard"><a href="#">Paper 1</a></div>
+	                                            <div class="selectStandard"><a href="#">Paper 2</a></div>
+	                                         </div>
+										</div>
+	                                   <div class="col-sm-12">
+	                                      <div class="publishProfile pad">
+	                                         <div class="publishData">
+	                                            <h5>Are you NET(National Eligibility Test) qualified ?</h5>
+	                                            <label class="switch">
+	                                            <input type="checkbox">
+	                                            <span class="slider round"></span>
+	                                            </label>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="publishProfile pad">
+	                                         <div class="publishData">
+	                                            <h5>Have you  attended any Professional training?</h5>
+	                                            <label class="switch">
+	                                            <input type="checkbox">
+	                                            <span class="slider round"></span>
+	                                            </label>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Conducted By</label>
+	                                         <input type="text" class="form-control"/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Number Of Days</label>
+	                                         <input type="text" class="form-control"/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Year Passed</label>
+	                                         <div class="row">
+	                                            <div class="col-sm-6">
+	                                               <div class="form-group">
+	                                                  <select class="form-control">
+	                                                     <option value="0">Select Month</option>
+	                                                     <option value="1">January</option>
+	                                                     <option value="1">Febuary</option>
+	                                                     <option value="1">March</option>
+	                                                     <option value="1">April</option>
+	                                                  </select>
+	                                               </div>
+	                                            </div>
+	                                            <div class="col-sm-6">
+	                                               <div class="form-group">
+	                                                  <select class="form-control">
+	                                                     <option value="0">Select Year</option>
+	                                                     <option value="1">2015</option>
+	                                                     <option value="1">2016</option>
+	                                                     <option value="1">2017</option>
+	                                                     <option value="1">2018</option>
+	                                                  </select>
+	                                               </div>
+	                                            </div>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="publishProfile pad">
+	                                         <div class="publishData">
+	                                            <h5>Have you  been an examiner?</h5>
+	                                            <label class="switch">
+	                                            <input type="checkbox">
+	                                            <span class="slider round"></span>
+	                                            </label>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+										 <div class="col-sm-12">
+	                                       <div class="form-group">
+	                                         <label>Select the board</label>
+	                                          <div class="selectBoard">
+											      <div class="selectInner">
+												   <label class="radioCont">
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+													<span class="color">Central board of Secondary Education (CBSE)</span>
+	                                               </label>
+												  </div>
+												       <div class="selectInner">
+												   <label class="radioCont">Council for the Indian School Certificate Examination (CISCE)
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+												  </div>
+												   <div class="selectInner">
+												   <label class="radioCont">National Institute of Open Schooling (NIOS)
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+												  </div>
+												  <div class="selectInner">
+												   <label class="radioCont">International Baccalaureate (IB) 
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+												  </div>
+												  <div class="selectInner">
+												   <label class="radioCont">International General Certificate of Secondary Education (IGCSE)
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+												  </div>
+												    <div class="selectInner">
+												   <label class="radioCont">STATE Board
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+												  </div>
+												     <div class="selectInner">
+												   <label class="radioCont">Other Board
+	                                               <input type="radio" checked="checked" name="radio">
+	                                               <span class="checkmark"></span>
+	                                               </label>
+												  </div>
+												  
+											   </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>How many years of durations</label>
+	                                         <input type="text" class="form-control" placeholder="Type here.."/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Latest Year</label>
+	                                         <select class="form-control">
+	                                            <option value="0"> Choose year</option>
+	                                            <option value="1">2010</option>
+	                                            <option value="1">2011</option>
+	                                            <option value="1">2012</option>
+	                                            <option value="1">2013</option>
+	                                         </select>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="form-group">
+	                                         <label>Any Comment ?(Optional)</label>
+	                                         <textarea class="form-control"></textarea>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                   <button class="btn btnCss btn-secondary previous-step"><i class="fa fa-angle-double-left"></i> Previous</button>
+	                                </div>
+	                                <!---->
+	                             </div>
+	                          </li>
+	                          <li class="step">
+	                             <div class="step-title waves-effect waves-dark"></div>
+	                             <div class="step-new-content">
+	                                <!---->
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Last Withdrawn Salary</label></div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Last Withdrawn salary Monthly</label>
+	                                         <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Expected salary Monthly</label>
+	                                         <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Opportunities you are interested in</label>
+	                                         <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-6">
+	                                      <div class="form-group">
+	                                         <label>Are you currently a full time teacher employed by a School/College</label>
+	                                         <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="row mb-4">
+	                                   <div class="col-sm-12">
+	                                      <div class="headingTitle"><label>Notice Period</label></div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="publishProfile pad">
+	                                         <div class="publishData">
+	                                            <h5>Immediate Joining</h5>
+	                                            <label class="switch">
+	                                            <input type="checkbox">
+	                                            <span class="slider round"></span>
+	                                            </label>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="publishProfile pad">
+	                                         <div class="publishData">
+	                                            <h5>Willing to Relocate anywhere in India?</h5>
+	                                            <label class="switch">
+	                                            <input type="checkbox">
+	                                            <span class="slider round"></span>
+	                                            </label>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                   <div class="col-sm-12">
+	                                      <div class="row">
+	                                         <div class="col-sm-12">
+	                                            <p><b>Within the state? (Choices)</b></p>
+	                                         </div>
+	                                         <div class="col-sm-4">
+	                                            <div class="form-group">
+	                                               <label>District 1</label>
+	                                               <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-4">
+	                                            <div class="form-group">
+	                                               <label>District 2</label>
+	                                               <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                            </div>
+	                                         </div>
+	                                         <div class="col-sm-4">
+	                                            <div class="form-group">
+	                                               <label>District 3</label>
+	                                               <input type="text" class="form-control" placeholder="Type Here .."/>
+	                                            </div>
+	                                         </div>
+	                                      </div>
+	                                   </div>
+	                                </div>
+	                                <div class="step-actions">
+	                                   <button class="btn btnCss btn-secondary  next-step" data-feedback="someFunction21">Next <i class="fa fa-angle-double-right"></i></button>
+	                                   <button class="btn btnCss btn-secondary previous-step"><i class="fa fa-angle-double-left"></i> Previous</button>
+	                                </div>
+	                                <!---->
+	                             </div>
+	                          </li>
+	                       </ul>
+	                    </div>
+	                    <!---->
+	                 </div>
+	              </div>
+				   <div class="row" style="display:none;">
+				   <div class="col-sm-12">
+
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">General Information</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-8">
+	                    <div class="generalInfo">
+	                       <div class="row mb-3">
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>First Name:</span>Chhavi </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Last Name:</span>Aggarwal </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Date of birth:</span>06-08-1988 </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Gender:</span>Female </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Post Applying for:</span>PGT-Post Graduate Teacher </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>How many years of experience:</span>5 Years  </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Marital Status: </span>Married </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Number of children:</span>2 </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Phone Number:</span> +50 123 456 78</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Whatsapp Number:</span>+50 444 5511 11</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-6">
+	                             <div class="generalDetails">
+	                                <label><span>Email ID:</span> chhaviaggarwal@gmail.com</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-4">
+	                    <div class="proImage">
+	                       <img src="assets/images/teacher-profile.png" alt="image" width="200"/> 
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Address</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Address:</span>Patel Chowk, Sansad Marg Area</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>City:</span>New Delhi</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>District:</span>Central Delhi</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>State:</span>New Delhi</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Country:</span>India</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Pincode:</span>11001</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Education Details</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>College Name:</span> PGGCG-42 New Delhi, India</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Degree Type:</span>Baechlor</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Degree Name:</span>B.Com</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>University:</span>Punjab University</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Medium:</span>English</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Year Passed:</span>2014</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Description:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Subjects & Specialization</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Primary Subject:</span> Science</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>
+	                                   <span>Secondary subjects you can teach?</span>
+	                                   <div class="selectDetails">
+	                                      <div class="selectSubjects"><a href="#">Physics</a></div>
+	                                      <div class="selectSubjects"><a href="#">Chemistry</a></div>
+	                                      <div class="selectSubjects"><a href="#">Biology</a></div>
+	                                   </div>
+	                                </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>
+	                                   <span>Standards taught</span>
+	                                   <div class="selectDetails">
+	                                      <div class="selectSubjects"><a href="#">3rd Standard</a></div>
+	                                      <div class="selectSubjects"><a href="#">6th Standard</a></div>
+	                                      <div class="selectSubjects"><a href="#">8th Standard</a></div>
+	                                      <div class="selectSubjects"><a href="#">10th Standard</a></div>
+	                                   </div>
+	                                </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>
+	                                   <span>Secondary/Co-curricular Activity</span>
+	                                   <div class="selectDetails">
+	                                      <div class="selectSubjects"><a href="#">Academic Teams</a></div>
+	                                      <div class="selectSubjects"><a href="#">Theatre</a></div>
+	                                      <div class="selectSubjects"><a href="#">Cultural Activities</a></div>
+	                                   </div>
+	                                </label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Employement Details</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>School Name:</span>School A</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Location:</span>New Delhi</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Country</span>India</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Position Held</span>PGT-Post Graduate Teacher</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>
+	                                   <span>Classes Taught</span>
+	                                   <div class="selectDetails">
+	                                      <div class="selectSubjects"><a href="#">3rd Standard</a></div>
+	                                      <div class="selectSubjects"><a href="#">6th Standard</a></div>
+	                                      <div class="selectSubjects"><a href="#">8th Standard</a></div>
+	                                      <div class="selectSubjects"><a href="#">10th Standard</a></div>
+	                                   </div>
+	                                </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>
+	                                   <span>Subjects Taught</span>
+	                                   <div class="selectDetails">
+	                                      <div class="selectSubjects"><a href="#">Physics</a></div>
+	                                      <div class="selectSubjects"><a href="#">Chemistry</a></div>
+	                                      <div class="selectSubjects"><a href="#">Biology</a></div>
+	                                   </div>
+	                                </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Period:</span>October 2018</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Through:</span>October 2020</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Description:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Tell us about Yourself</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta su</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Upload Video</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Video Uploaded:</span><span class="download"><i class="fa fa-download"></i></span> <span class="closeIcon"><i class="fa fa-close"></i></span></label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Upload Certificates</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Uploaded X/Metric:</span><span class="download"><i class="fa fa-download"></i></span> <span class="closeIcon"><i class="fa fa-close"></i></span></label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Uploaded XII/Post Metric:</span><span class="download"><i class="fa fa-download"></i></span> <span class="closeIcon"><i class="fa fa-close"></i></span></label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Uploaded Graduation:</span><span class="download"><i class="fa fa-download"></i></span> <span class="closeIcon"><i class="fa fa-close"></i></span></label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Uploaded Post Graduation:</span><span class="download"><i class="fa fa-download"></i></span> <span class="closeIcon"><i class="fa fa-close"></i></span></label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Uploaded Others:</span><span class="download"><i class="fa fa-download"></i></span> <span class="closeIcon"><i class="fa fa-close"></i></span></label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Training/Certifications</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label>
+	                                   <span>Are you a qualified CTET(Central Teachers Eligibility Test) teacher:    </span>Yes  &nbsp; &nbsp;
+	                                   <div class="selectDetails">
+	                                      <div class="selectSubjects"><a href="#">Paper 1</a></div>
+	                                      <div class="selectSubjects"><a href="#">Paper 2</a></div>
+	                                   </div>
+	                                </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Are you NET(National Eligibility Test) qualified:</span>Yes</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Have you  attended any Professional training:</span>Yes</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Conducted By:</span> Lorem ipsum dolor sit amet, consectetur adipiscing     </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Number of Days:</span>30 Days</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Year Passed:</span>Nov-2019</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Have you  been an examiner:</span>Yes</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Select the board:</span> Central board of                         Secondary Education (CBSE)     </label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>How many years of durations:</span>3 years</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Latest Year:</span>2018</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Any Comment:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Last Withdrawn Salary</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Last Withdrawn salary Monthly:</span>18000</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Expected Salary Monthly:</span>25000</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Opportunities you are interested in:</span>Lorem ipsum dolor sit amet, consectetur adipiscing</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Are you currently a full time teacher employed by a School/College:      </span>Yes</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <hr>
+	                 </div>
+	              </div>
+	              <!---->
+	              <div class="row mb-3">
+	                 <div class="col-sm-12">
+	                    <div class="profileInfo mb-3">
+	                       <h2 class="fs-18">Notice Period</h2>
+	                    </div>
+	                 </div>
+	                 <div class="col-sm-12">
+	                    <div class="generalInfo">
+	                       <div class="row mb-3">
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Notice Period:</span>Yes</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Number of Days:</span>30 Days</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>Immediate Joining: </span>No</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-12">
+	                             <div class="generalDetails">
+	                                <label><span>Willing to Relocate anywhere in India:</span>Yes</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                       <div class="row">
+	                          <div class="col-sm-12">
+	                             <h5><strong>Option 1</strong></h5>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>State:</span>Chandigarh</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>District:</span>Chandigarh</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                       <div class="row">
+	                          <div class="col-sm-12">
+	                             <h5><strong>Option 2</strong></h5>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>State:</span>New Delhi</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>District:</span>Central Delhi</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                       <div class="row">
+	                          <div class="col-sm-12">
+	                             <h5><strong>Option 3</strong></h5>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>State:</span>Mumbai</label>
+	                             </div>
+	                          </div>
+	                          <div class="col-sm-4">
+	                             <div class="generalDetails">
+	                                <label><span>District:</span>Thane</label>
+	                             </div>
+	                          </div>
+	                       </div>
+	                    </div>
+	                 </div>
+	              </div>
+	              <!---->
+					  </div>
+				   </div>
+	           </div>
+	        </div>
+	        <!---->
+	     </div>
+	  </div>
+	</div>
+	 <!--modal popups-->
+      <div class="modal" id="myModalEducation">
+         <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title">Add Education</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                           <label>Institution name/College Name</label> 
+                           <input type="text" class="form-control" placeholder="Type Here.."/>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                           <label>Degree Type</label> 
+                           <select class="form-control">
+                              <option value="0">Select Degree Type</option>
+                              <option value="1">Graduation</option>
+                              <option value="2">Post Graduation</option>
+                              <option value="3">Professional Degree </option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                           <label>Degree Name</label> 
+                           <input type="text" class="form-control" placeholder="Type Here.."/>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                           <label>University Name</label> 
+                           <input type="text" class="form-control" placeholder="Type Here.."/>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                           <label>Medium</label> 
+                           <select class="form-control">
+                              <option value="0">Choose Medium</option>
+                              <option value="1">English</option>
+                              <option value="2">Hindi</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="form-group">
+                           <label>Year Of Passing</label> 
+                           <select class="form-control">
+                              <option value="0">Choose Year</option>
+                              <option value="1">2010</option>
+                              <option value="2">2011</option>
+                              <option value="2">2012</option>
+                              <option value="2">2013</option>
+                              <option value="2">2014</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Description (Optional)</label> 
+                           <textarea class="form-control"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btnCss mr-1" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-secondary btnCss" data-dismiss="modal">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!---->
+      <div class="modal" id="myModalEmployment">
+         <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title">Add Employment</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <div class="form-group">
+
+                           <label>School</label> 
+                           <input type="text" class="form-control" placeholder="Type Here.."/>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="form-group">
+                           <label>Location</label> 
+                           <input type="text" class="form-control" placeholder="Type Here.."/>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="form-group">
+                           <label>Country</label> 
+                           <select class="form-control">
+                              <option value="0">Select Country</option>
+                              <option value="1">India</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Position Held</label> 
+                           <select class="form-control">
+                              <option value="0">Select Position Held</option>
+                              <option value="1">PRT – Primary Teacher </option>
+                              <option value="1"> TGT – Trained Graduate Teacher  </option>
+                              <option value="1">Kindergarten Teacher </option>
+                              <option value="1">Librarian  </option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Classes Taught</label> 
+                           <div class="selecttaught">
+                              <div class="selectStandard"><a href="#">Pre-Nursery</a></div>
+                              <div class="selectStandard"><a href="#">Nursery</a></div>
+                              <div class="selectStandard"><a href="#">Kindergarten </a></div>
+                              <div class="selectStandard"><a href="#">1st Standard</a></div>
+                              <div class="selectStandard"><a href="#">2nd Standard</a></div>
+                              <div class="selectStandard"><a href="#">3rd Standard</a></div>
+                              <div class="selectStandard"><a href="#">4th Standard</a></div>
+                              <div class="selectStandard"><a href="#">5th Standard</a></div>
+                              <div class="selectStandard"><a href="#">6th Standard</a></div>
+                              <div class="selectStandard"><a href="#">7th Standard</a></div>
+                              <div class="selectStandard"><a href="#">8th Standard</a></div>
+                              <div class="selectStandard"><a href="#">9th Standard</a></div>
+                              <div class="selectStandard"><a href="#">10th Standard</a></div>
+                              <div class="selectStandard"><a href="#">11th Standard</a></div>
+                              <div class="selectStandard"><a href="#">12th Standard</a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Secondary subjects you can teach?</label> 
+                           <input value="Physics, Chemistry, Biology " name="tags5" class="form-control" />
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Period</label> 
+                           <div class="row">
+                              <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <select class="form-control">
+                                       <option value="0">Select Month</option>
+                                       <option value="1">January</option>
+                                       <option value="1">Febuary</option>
+                                       <option value="1">March</option>
+                                       <option value="1">April</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <select class="form-control">
+                                       <option value="0">Select Year</option>
+                                       <option value="1">2015</option>
+                                       <option value="1">2016</option>
+                                       <option value="1">2017</option>
+                                       <option value="1">2018</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Through</label> 
+                           <div class="row">
+                              <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <select class="form-control">
+                                       <option value="0">Select Month</option>
+                                       <option value="1">January</option>
+                                       <option value="1">Febuary</option>
+                                       <option value="1">March</option>
+                                       <option value="1">April</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <select class="form-control">
+                                       <option value="0">Select Year</option>
+                                       <option value="1">2015</option>
+                                       <option value="1">2016</option>
+                                       <option value="1">2017</option>
+                                       <option value="1">2018</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Description (Optional)</label> 
+                           <textarea class="form-control"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btnCss mr-1" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-secondary btnCss" data-dismiss="modal">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!---->
+
+
+{% endblock %}

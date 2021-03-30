@@ -2,11 +2,11 @@ from django.urls import path
 
 from .views import (
     SchoolDashboard,
-    # EmailConformationView,
-    # LoginView,
-    # PasswordResetApiView,
-    # LogOutView,
-    # UserDetailApiView
+    SchoolProfiles,
+    SchoolPostJob,
+    SchoolBrowseTeacher,
+    SchoolTrackJob,
+    SchoolMessage,
 )
 
 
@@ -16,26 +16,29 @@ urlpatterns = [
         SchoolDashboard.as_view(),
         name='school_dashboard',
     ),
-    # path(
-    #     'email-conformation/<str:activation_key>/',
-    #     EmailConformationView.as_view(),
-    #     name='email_conformation'
-    # ),
-    # path('login/', 
-    #     LoginView.as_view(),
-    #     name='login_view'
-    # ),
-    # path(
-    #     'change-password/',
-    #     PasswordResetApiView.as_view(),
-    #     name='change-password',
-    # ),
-    # path(
-    # 	'user/',
-    # 	UserDetailApiView.as_view(),
-    #     name='user-detail',
-    # ),
-    # path('logout/', 
-    #     LogOutView.as_view()
-    # ),
+    path(
+        'profile/',
+        SchoolProfiles.as_view(),
+        name='school_profile',
+    ),
+    path(
+        'post_job/',
+        SchoolPostJob.as_view(),
+        name='school_post_job',
+    ),
+    path(
+        'browseteacher/',
+        SchoolBrowseTeacher.as_view(),
+        name='school_browse_teacher',
+    ),
+    path(
+        'track_job/',
+        SchoolTrackJob.as_view(),
+        name='school_track_job',
+    ),
+    path(
+        'message/',
+        SchoolMessage.as_view(),
+        name='school_message',
+    ),
 ]

@@ -1,0 +1,494 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+
+{% block content %}
+ <div id="kt_content" class="content d-flex flex-column flex-column-fluid">
+                  <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+                     <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                        <div class="d-flex align-items-center flex-wrap mr-2">
+                           <div class="d-flex align-items-center flex-wrap mr-1">
+                              <div class="d-flex align-items-baseline flex-wrap mr-5">
+                                 <ul class="breadcrumb p-0 my-2 font-size-sm">
+                                    <li class="breadcrumb-item"><a href="#">Search Jobs</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="searchJobs">
+                              <nav class="navbar navbar-expand-sm">
+                                 <ul class="navbar-nav searchBox">
+                                    <div class="input-group">
+                                       <div class="input-group-btn search-panel">
+                                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                          <span id="search_concept">All Cities </span> <span class="fa fa-angle-down"></span>
+                                          </button>
+                                          <ul class="dropdown-menu" role="menu">
+                                             <li><a href="#Ambala">New Delhi</a></li>
+                                             <li><a href="#kurukshetra">kurukshetra</a></li>
+                                             <li><a href="#Panipat">Panipat</a></li>
+                                          </ul>
+                                       </div>
+                                       <input type="hidden" name="search_param" value="all" id="search_param">         
+                                       <input type="text" class="form-control" name="x" placeholder="Search by Title, School or any jobs keyword...">
+                                       <span class="input-group-btn">
+                                       <button class="btn btnBlue" type="button"><span class="fa fa-search"></span>SEARCH</button>
+                                       </span>
+                                    </div>
+                                 </ul>
+                              </nav>
+                           </div>
+                           <div class="suggestions">
+                              <div class="title">Suggestions</div>
+                              <div class="suggList">
+                                 <div class="subjects active">Subjects</div>
+                                 <div class="subjects">Physics <span><i class="material-icons">close</i></span></div>
+                                 <div class="subjects">Chemistry <span><i class="material-icons">close</i></span></div>
+                                 <div class="subjects">Biology <span><i class="material-icons">close</i></span></div>
+                              </div>
+                           </div>
+                           <div class="jobResults">
+                              <div class="resultsHeading">
+                                 <h2 class="fs-14">Showing 15 Jobs Results</h2>
+                                 <h3 class="fs-12">Based your preferences</h3>
+                              </div>
+                              <div class="resultOptions">
+                                 <div class="resTime">
+                                    <ul>
+                                       <li>
+                                          <span class="icon">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0)">
+                                                   <path d="M22.8506 6.86632C21.8709 4.78976 20.3193 3.04601 18.3646 1.82257C15.6459 0.125693 12.4256 -0.413369 9.3037 0.308506C6.18183 1.02569 3.52402 2.91944 1.82714 5.63819C0.12558 8.35694 -0.413483 11.5726 0.308392 14.6991C1.03027 17.821 2.92402 20.4788 5.63808 22.1757C7.55058 23.371 9.74433 24.0038 11.9896 24.0038H12.135C14.3709 23.9757 16.5459 23.3288 18.4303 22.1382C18.9787 21.7913 19.1381 21.0694 18.7912 20.521C18.4443 19.9726 17.7225 19.8132 17.174 20.1601C15.66 21.121 13.9068 21.6413 12.1068 21.6648C10.26 21.6882 8.45527 21.1773 6.88027 20.1976C4.6912 18.8288 3.16777 16.6913 2.5912 14.1788C2.01464 11.6663 2.44589 9.07882 3.81464 6.88976C6.63652 2.37569 12.6084 0.997569 17.1225 3.81944C18.6975 4.80382 19.9443 6.20538 20.7318 7.87413C21.5006 9.50069 21.8006 11.3054 21.599 13.0866C21.5287 13.7288 21.9881 14.3101 22.635 14.3804C23.2771 14.4507 23.8584 13.9913 23.9287 13.3444C24.1771 11.1273 23.8021 8.88663 22.8506 6.86632Z" fill="#40189D"/>
+                                                   <path d="M15.8773 7.93086L10.2242 13.584L8.1289 11.4887C7.66953 11.0293 6.92891 11.0293 6.46953 11.4887C6.01016 11.948 6.01016 12.6887 6.46953 13.148L9.39453 16.073C9.62421 16.3027 9.92421 16.4152 10.2242 16.4152C10.5242 16.4152 10.8242 16.3027 11.0539 16.073L17.532 9.59023C17.9914 9.13086 17.9914 8.39023 17.532 7.93086C17.0726 7.47617 16.332 7.47617 15.8773 7.93086Z" fill="#40189D"/>
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0">
+                                                      <rect width="24" height="24" fill="white"/>
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                          Full Time
+                                       </li>
+                                       <li>
+                                          <span class="icon">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0)">
+                                                   <path d="M22.8506 6.86632C21.8709 4.78976 20.3193 3.04601 18.3646 1.82257C15.6459 0.125693 12.4256 -0.413369 9.3037 0.308506C6.18183 1.02569 3.52402 2.91944 1.82714 5.63819C0.12558 8.35694 -0.413483 11.5726 0.308392 14.6991C1.03027 17.821 2.92402 20.4788 5.63808 22.1757C7.55058 23.371 9.74433 24.0038 11.9896 24.0038H12.135C14.3709 23.9757 16.5459 23.3288 18.4303 22.1382C18.9787 21.7913 19.1381 21.0694 18.7912 20.521C18.4443 19.9726 17.7225 19.8132 17.174 20.1601C15.66 21.121 13.9068 21.6413 12.1068 21.6648C10.26 21.6882 8.45527 21.1773 6.88027 20.1976C4.6912 18.8288 3.16777 16.6913 2.5912 14.1788C2.01464 11.6663 2.44589 9.07882 3.81464 6.88976C6.63652 2.37569 12.6084 0.997569 17.1225 3.81944C18.6975 4.80382 19.9443 6.20538 20.7318 7.87413C21.5006 9.50069 21.8006 11.3054 21.599 13.0866C21.5287 13.7288 21.9881 14.3101 22.635 14.3804C23.2771 14.4507 23.8584 13.9913 23.9287 13.3444C24.1771 11.1273 23.8021 8.88663 22.8506 6.86632Z" fill="#40189D"/>
+                                                   <path d="M15.8773 7.93086L10.2242 13.584L8.1289 11.4887C7.66953 11.0293 6.92891 11.0293 6.46953 11.4887C6.01016 11.948 6.01016 12.6887 6.46953 13.148L9.39453 16.073C9.62421 16.3027 9.92421 16.4152 10.2242 16.4152C10.5242 16.4152 10.8242 16.3027 11.0539 16.073L17.532 9.59023C17.9914 9.13086 17.9914 8.39023 17.532 7.93086C17.0726 7.47617 16.332 7.47617 15.8773 7.93086Z" fill="#40189D"/>
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0">
+                                                      <rect width="24" height="24" fill="white"/>
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                          Part Time
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="resDetails">
+                                    <div class="details">Details         
+                                       <label class="switch">
+                                       <input type="checkbox">
+                                       <span class="slider round"></span>
+                                       </label>
+                                    </div>
+                                    <div class="salary">Salary
+                                       <label class="switch">
+                                       <input type="checkbox">
+                                       <span class="slider round"></span>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="resultDrop">
+                                    <div class="dropdown">
+                                       <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
+                                          <span class="icon">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.2924 16.293L7.99943 18.5859V3C7.99943 2.73478 7.89407 2.48043 7.70654 2.29289C7.519 2.10536 7.26465 2 6.99943 2C6.73421 2 6.47986 2.10536 6.29232 2.29289C6.10479 2.48043 5.99943 2.73478 5.99943 3V18.5859L3.70643 16.293C3.51783 16.1108 3.26523 16.01 3.00303 16.0123C2.74083 16.0146 2.49002 16.1198 2.30461 16.3052C2.1192 16.4906 2.01403 16.7414 2.01176 17.0036C2.00948 17.2658 2.11027 17.5184 2.29243 17.707L6.29243 21.707C6.48013 21.8942 6.7344 21.9993 6.99948 21.9993C7.26456 21.9993 7.51883 21.8942 7.70653 21.707L11.7065 17.707C11.8894 17.5185 11.9907 17.2657 11.9887 17.0031C11.9867 16.7405 11.8815 16.4893 11.6958 16.3036C11.5101 16.118 11.2589 16.0128 10.9963 16.0108C10.7337 16.0088 10.4809 16.1102 10.2924 16.293Z" fill="#40189D"/>
+                                                <path d="M11 6H21C21.2652 6 21.5196 5.89464 21.7071 5.7071C21.8946 5.51957 22 5.26521 22 5C22 4.73478 21.8946 4.48043 21.7071 4.29289C21.5196 4.10536 21.2652 4 21 4H11C10.7348 4 10.4804 4.10536 10.2929 4.29289C10.1054 4.48043 10 4.73478 10 5C10 5.26521 10.1054 5.51957 10.2929 5.7071C10.4804 5.89464 10.7348 6 11 6Z" fill="#40189D"/>
+                                                <path d="M21 8H11C10.7348 8 10.4804 8.10536 10.2929 8.29289C10.1054 8.48043 10 8.73478 10 9C10 9.26521 10.1054 9.51957 10.2929 9.7071C10.4804 9.89464 10.7348 10 11 10H21C21.2652 10 21.5196 9.89464 21.7071 9.7071C21.8946 9.51957 22 9.26521 22 9C22 8.73478 21.8946 8.48043 21.7071 8.29289C21.5196 8.10536 21.2652 8 21 8Z" fill="#40189D"/>
+                                                <path d="M18 12H11C10.7348 12 10.4804 12.1054 10.2929 12.2929C10.1054 12.4804 10 12.7348 10 13C10 13.2652 10.1054 13.5196 10.2929 13.7071C10.4804 13.8947 10.7348 14 11 14H18C18.2652 14 18.5196 13.8947 18.7071 13.7071C18.8946 13.5196 19 13.2652 19 13C19 12.7348 18.8946 12.4804 18.7071 12.2929C18.5196 12.1054 18.2652 12 18 12Z" fill="#40189D"/>
+                                             </svg>
+                                          </span>
+                                          Newest
+                                       </button>
+                                       <div class="dropdown-menu">
+                                          <a class="dropdown-item" href="#">Link 1</a>
+                                          <a class="dropdown-item" href="#">Link 2</a>
+                                          <a class="dropdown-item" href="#">Link 3</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="resultFilters">
+                                    <div class="listView active listTab1" id="listTab1">
+                                       <span>
+                                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M6 7.5H3C2.17275 7.5 1.5 6.82687 1.5 6V3C1.5 2.17313 2.17275 1.5 3 1.5H6C6.82725 1.5 7.5 2.17313 7.5 3V6C7.5 6.82687 6.82725 7.5 6 7.5ZM3 3V6H6.00113L6 3H3ZM22.5 4.5C22.5 4.08544 22.1642 3.75 21.75 3.75H9.75C9.33581 3.75 9 4.08544 9 4.5C9 4.91456 9.33581 5.25 9.75 5.25H21.75C22.1642 5.25 22.5 4.91456 22.5 4.5ZM6 15H3C2.17275 15 1.5 14.3269 1.5 13.5V10.5C1.5 9.67313 2.17275 9 3 9H6C6.82725 9 7.5 9.67313 7.5 10.5V13.5C7.5 14.3269 6.82725 15 6 15ZM3 10.5V13.5H6.00113L6 10.5H3ZM22.5 12C22.5 11.5854 22.1642 11.25 21.75 11.25H9.75C9.33581 11.25 9 11.5854 9 12C9 12.4146 9.33581 12.75 9.75 12.75H21.75C22.1642 12.75 22.5 12.4146 22.5 12ZM6 22.5H3C2.17275 22.5 1.5 21.8269 1.5 21V18C1.5 17.1731 2.17275 16.5 3 16.5H6C6.82725 16.5 7.5 17.1731 7.5 18V21C7.5 21.8269 6.82725 22.5 6 22.5ZM3 18V21H6.00113L6 18H3ZM22.5 19.5C22.5 19.0854 22.1642 18.75 21.75 18.75H9.75C9.33581 18.75 9 19.0854 9 19.5C9 19.9146 9.33581 20.25 9.75 20.25H21.75C22.1642 20.25 22.5 19.9146 22.5 19.5Z" fill="white"/>
+                                          </svg>
+                                       </span>
+                                    </div>
+                                    <div class="listView listTab2" id="listTab2">
+                                       <span>
+                                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10 1H2C1.73478 1 1.48043 1.10536 1.29289 1.29289C1.10536 1.48043 1 1.73478 1 2V10C1 10.2652 1.10536 10.5196 1.29289 10.7071C1.48043 10.8946 1.73478 11 2 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V2C11 1.73478 10.8946 1.48043 10.7071 1.29289C10.5196 1.10536 10.2652 1 10 1ZM9 9H3V3H9V9Z" fill="white"/>
+                                             <path d="M22 1H14C13.7348 1 13.4804 1.10536 13.2929 1.29289C13.1054 1.48043 13 1.73478 13 2V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11H22C22.2652 11 22.5196 10.8946 22.7071 10.7071C22.8946 10.5196 23 10.2652 23 10V2C23 1.73478 22.8946 1.48043 22.7071 1.29289C22.5196 1.10536 22.2652 1 22 1ZM21 9H15V3H21V9Z" fill="white"/>
+                                             <path d="M10 13H2C1.73478 13 1.48043 13.1054 1.29289 13.2929C1.10536 13.4804 1 13.7348 1 14V22C1 22.2652 1.10536 22.5196 1.29289 22.7071C1.48043 22.8946 1.73478 23 2 23H10C10.2652 23 10.5196 22.8946 10.7071 22.7071C10.8946 22.5196 11 22.2652 11 22V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13ZM9 21H3V15H9V21Z" fill="white"/>
+                                             <path d="M22 13H14C13.7348 13 13.4804 13.1054 13.2929 13.2929C13.1054 13.4804 13 13.7348 13 14V22C13 22.2652 13.1054 22.5196 13.2929 22.7071C13.4804 22.8946 13.7348 23 14 23H22C22.2652 23 22.5196 22.8946 22.7071 22.7071C22.8946 22.5196 23 22.2652 23 22V14C23 13.7348 22.8946 13.4804 22.7071 13.2929C22.5196 13.1054 22.2652 13 22 13ZM21 21H15V15H21V21Z" fill="white"/>
+                                          </svg>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--grid view-->
+                     <div class="row d-none gridView" id="gridView">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School A</p>
+                                       <h4 class="fs-16 text-black">PGT</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School B</p>
+                                       <h4 class="fs-16 text-black">PTI</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School C</p>
+                                       <h4 class="fs-16 text-black text-uppercase">Tgt</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School D</p>
+                                       <h4 class="fs-16 text-black">Music Teacher</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School E</p>
+                                       <h4 class="fs-16 text-black text-uppercase">Political Science</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School F</p>
+                                       <h4 class="fs-16 text-black text-uppercase">PGT</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School A</p>
+                                       <h4 class="fs-16 text-black text-uppercase">Tgt</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School B</p>
+                                       <h4 class="fs-16 text-black text-uppercase">Pti</h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="card shadow">
+                              <div class="card-body">
+                                 <div class="media mb-2">
+                                    <div class="media-body">
+                                       <p class="mb-1 text-gray fs-14">School C</p>
+                                       <h4 class="fs-16 text-black text-uppercase">Fine Arts Teacher </h4>
+                                    </div>
+                                    <div class="media-text">
+                                       <img  src="assets/images/image1.png" alt="image"/>
+                                       <span>New Delhi, India</span><br>
+                                       <span>Full Time</span>
+                                    </div>
+                                 </div>
+                                 <span class="text-blue font-w500 d-block mb-3 fs-14">14,000 -    25,000</span>
+                                 <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                 <div class="d-flex align-items-center mt-4">
+                                    <a href="companies.html" class="btn btn-gray btn-rounded mr-auto fs-14">Apply Job</a>
+                                    <span class="text-blue font-w500 iconDiv"><i class="fa fa-eye"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12">
+                           <div class="searchPagination">
+                              <ul class="pagination pagination-gutter">
+                                 <li class="page-item page-indicator">
+                                    <a class="page-link" href="javascript:void()">
+                                    <i class="fa fa-angle-left"></i></a>
+                                 </li>
+                                 <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                                 </li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                                 <li class="page-item page-indicator">
+                                    <a class="page-link" href="javascript:void()">
+                                    <i class="fa fa-angle-right"></i></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <!--list view-->
+                     <div class="row tableView" id="listView">
+                        <div class="col-sm-12">
+                           <div class="searchTable">
+                              <div class="table-responsive">
+                                 <table class="table">
+                                    <thead>
+                                       <tr>
+                                          <th>School Name</th>
+                                          <th>Position</th>
+                                          <th>Primary Subject</th>
+                                          <th>Secondary Subject</th>
+                                          <th>Type</th>
+                                          <th>Location</th>
+                                          <th></th>
+                                          <th>Actions</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>School A</td>
+                                          <td><a href="#">PGT</a></td>
+                                          <td>Science</td>
+                                          <td><span class="label label-light-primary label-inline">Physics</span>
+                                             <span class="label label-light-primary label-inline">Chemistry</span>
+                                             <span class="label label-light-primary label-inline">Biology</span>
+                                          </td>
+                                          <td>Full Time</td>
+                                          <td>New Delhi,India</td>
+                                          <td><button class="btn btnGrey">Apply Job</button></td>
+                                          <td><span class="text-blue font-w500 actions"><a href="search-profile"><i class="fa fa-eye"></i></a></span></td>
+                                       </tr>
+                                       <tr>
+                                          <td>School B</td>
+                                          <td><a href="#">TGT</a></td>
+                                          <td>English</td>
+                                          <td><span class="label label-light-primary label-inline">Physics</span>
+                                             <span class="label label-light-primary label-inline">Chemistry</span>
+                                             <span class="label label-light-primary label-inline">Biology</span>
+                                          </td>
+                                          <td>Part Time</td>
+                                          <td>New Delhi,India</td>
+                                          <td><button class="btn btnGrey">Apply Job</button></td>
+                                           <td><span class="text-blue font-w500 actions"><a href="#"><i class="fa fa-eye"></i></a></span></td>
+                                       </tr>
+                                       <tr>
+                                          <td>School C</td>
+                                          <td><a href="#">PTI</a></td>
+                                          <td>Mathematics</td>
+                                          <td><span class="label label-light-primary label-inline">Physics</span>
+                                             <span class="label label-light-primary label-inline">Chemistry</span>
+                                             <span class="label label-light-primary label-inline">Biology</span>
+                                          </td>
+                                          <td>Full Time</td>
+                                          <td>New Delhi,India</td>
+                                          <td><button class="btn btnGrey">Apply Job</button></td>
+                                           <td><span class="text-blue font-w500 actions"><a href="#"><i class="fa fa-eye"></i></a></span></td>
+                                       </tr>
+                                       <tr>
+                                          <td>School D</td>
+                                          <td><a href="#">Required Music Teacher</a></td>
+                                          <td>Computer Science</td>
+                                          <td><span class="label label-light-primary label-inline">Physics</span>
+                                             <span class="label label-light-primary label-inline">Chemistry</span>
+                                             <span class="label label-light-primary label-inline">Biology</span>
+                                          </td>
+                                          <td>Full Time</td>
+                                          <td>New Delhi,India</td>
+                                          <td><button class="btn btnGrey">Apply Job</button></td>
+                                          <td><span class="text-blue font-w500 actions"><a href="#"><i class="fa fa-eye"></i></a></span></td>
+                                       </tr>
+                                       <tr>
+                                          <td>School E</td>
+                                          <td><a href="#">PGT</a></td>
+                                          <td>Science</td>
+                                          <td><span class="label label-light-primary label-inline">Physics</span>
+                                             <span class="label label-light-primary label-inline">Chemistry</span>
+                                             <span class="label label-light-primary label-inline">Biology</span>
+                                          </td>
+                                          <td>Part Time</td>
+                                          <td>New Delhi,India</td>
+                                          <td><button class="btn btnGrey">Apply Job</button></td>
+                                          <td><span class="text-blue font-w500 actions"><a href="#"><i class="fa fa-eye"></i></a></span></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12">
+                           <div class="searchPagination">
+                              <ul class="pagination pagination-gutter">
+                                 <li class="page-item page-indicator">
+                                    <a class="page-link" href="javascript:void()">
+                                    <i class="fa fa-angle-left"></i></a>
+                                 </li>
+                                 <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                                 </li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                                 <li class="page-item page-indicator">
+                                    <a class="page-link" href="javascript:void()">
+                                    <i class="fa fa-angle-right"></i></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+{% endblock %}

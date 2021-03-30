@@ -25,11 +25,11 @@
       <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.min.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.theme.default.min.css' %}">
 
+      <link rel="stylesheet" type="text/css" href="{% static 'assets/css/steppers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/tagger.css' %}">
 
 	</head>
 	<body>
-
-		<body>
       <!---->
       <!--header mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
@@ -88,9 +88,7 @@
 					<ul class="br-sideleft-menu">
 						<li class="menu-link <?php echo $current_page == '/torrinsproject/index' ? 'active':'' ?>">
 							{% for menus in SideBarMenus %}
-
-							<a href="index">
-								
+							<a href="/{{menus.slug}}/">
 								<span class="icon">
 									<img src="{% static 'assets/images/' %}{{ menus.icon }}">
 								</span>
@@ -197,7 +195,7 @@
          </div>
       </div>
       <!--support -->
-       <div class="chatWrapper">
+       <!-- <div class="chatWrapper">
           <div class="chatStatus">
 			   <span id="maximizeChat" title="Maximize" class="appear">
 				   <i class="fa fa-comment" aria-hidden="true"></i>
@@ -206,8 +204,8 @@
 			    <i class="fa fa-close"></i>
 			  </span>
 		   </div>
-       </div>
-      <div class="chatBoxContainer">
+       </div> -->
+      <!-- <div class="chatBoxContainer">
 		     <div class="card">
 			   <div class="card-header">Send Message</div> 
 			   <div class="card-body">
@@ -242,28 +240,75 @@
 				   </div>
 			   </div>
 			 </div>
-		  </div>
+		  </div> -->
       <!---->
 
       
       
 
-      <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-      <script src="{% static 'assets/js/popper.min.js' %}"></script>
-      <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-      <script src="{% static 'assets/js/custom.js' %}"></script>
-      <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
-      <script src="{% static 'assets/js/jquery-asRange.js' %}"></script>
-      <script src="{% static 'assets/js/jquery.nicescroll.min.js' %}"></script>
 
-      <script>
-        $(document).ready(function(){
-        	$("#kt_aside_toggle").click(function(){
-        		$('body').toggleClass('aside-minimize');
-        	});
-        });
-      </script>
 
-	{% block script%}{% endblock %}
+      
+	{% block script %}
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+	      <script src="{% static 'assets/js/popper.min.js' %}"></script>
+	      <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	      <script src="{% static 'assets/js/custom.js' %}"></script>
+	      <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+	      <script src="{% static 'assets/js/jquery-asRange.js' %}"></script>
+	      <script src="{% static 'assets/js/jquery.nicescroll.min.js' %}"></script>
+	      <script src="{% static 'assets/js/steppers.min.js' %}"></script>
+		  <script src="{% static 'assets/js/tagger.js' %}"></script>
+
+
+	      <script>
+	        $(document).ready(function(){
+	        	$("#kt_aside_toggle").click(function(){
+	        		$('body').toggleClass('aside-minimize');
+	        	});
+	        });
+
+
+         $(document).ready(function () {
+         	$('.stepper').mdbStepper();
+         })
+         
+         function someFunction21() {
+	         setTimeout(function () {
+	         	$('#horizontal-stepper').nextStep();
+	         }, 2000);
+         }
+	      </script>
+	       <script>
+	         var t3 = tagger(document.querySelector('[name="tags3"]'), {
+	                  allow_duplicates: true,
+	                  allow_spaces: true,
+	                });
+	         var t3 = tagger(document.querySelector('[name="tags4"]'), {
+	                  allow_duplicates: true,
+	                  allow_spaces: true,
+	                }); 
+	         var t3 = tagger(document.querySelector('[name="tags5"]'), {
+	                  allow_duplicates: true,
+	                  allow_spaces: true,
+	                }); 
+	      </script>
+	       <script>
+	         $(document).ready(function(){
+	         	$("#listTab1").click(function(){
+					$('.gridView').addClass('d-none');
+					$('.tableView').removeClass('d-none');
+					$('.listTab2').removeClass('active');
+					$('.listTab1').addClass('active');
+	          	});
+         		$("#listTab2").click(function(){
+					$('.listTab2').addClass('active');
+					$('.listTab1').removeClass('active');
+					$('.gridView').removeClass('d-none');
+					$('.tableView').addClass('d-none');
+	          	});
+	         });
+	      </script>
+	{% endblock %}
 	</body>
 </html>

@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+
+{% block content %}
+ <div id="kt_content" class="content d-flex flex-column flex-column-fluid">
+                  <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+                     <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                        <div class="d-flex align-items-center flex-wrap mr-2">
+                           <div class="d-flex align-items-center flex-wrap mr-1">
+                              <div class="d-flex align-items-baseline flex-wrap mr-5">
+                                 <ul class="breadcrumb p-0 my-2 font-size-sm">
+                                    <li class="breadcrumb-item"><a href="#">Track Job Posted</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container-fluid">
+                     <div class="row ">
+                        <div class="col-sm-12">
+                           <div class="jobResults">
+                              <div class="resultsHeading">
+                                 <h2 class="fs-14">Showing 16 Applications</h2>
+                                 <h3 class="fs-12">Based your preferences</h3>
+                              </div>
+                              <div class="filterButtons">
+                                 <ul>
+                                    <li class="active"><a href="#">All</a></li>
+                                    <li><a href="#">Open</a></li>
+                                    <li><a href="#">Closed</a></li>
+                                    <li><a href="#">Paused</a></li>
+                                 </ul>
+                              </div>
+                              <div class="resultOptions">
+                                 <div class="resultDrop">
+                                    <div class="dropdown">
+                                       <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
+                                          <span class="icon">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.2924 16.293L7.99943 18.5859V3C7.99943 2.73478 7.89407 2.48043 7.70654 2.29289C7.519 2.10536 7.26465 2 6.99943 2C6.73421 2 6.47986 2.10536 6.29232 2.29289C6.10479 2.48043 5.99943 2.73478 5.99943 3V18.5859L3.70643 16.293C3.51783 16.1108 3.26523 16.01 3.00303 16.0123C2.74083 16.0146 2.49002 16.1198 2.30461 16.3052C2.1192 16.4906 2.01403 16.7414 2.01176 17.0036C2.00948 17.2658 2.11027 17.5184 2.29243 17.707L6.29243 21.707C6.48013 21.8942 6.7344 21.9993 6.99948 21.9993C7.26456 21.9993 7.51883 21.8942 7.70653 21.707L11.7065 17.707C11.8894 17.5185 11.9907 17.2657 11.9887 17.0031C11.9867 16.7405 11.8815 16.4893 11.6958 16.3036C11.5101 16.118 11.2589 16.0128 10.9963 16.0108C10.7337 16.0088 10.4809 16.1102 10.2924 16.293Z" fill="#40189D"></path>
+                                                <path d="M11 6H21C21.2652 6 21.5196 5.89464 21.7071 5.7071C21.8946 5.51957 22 5.26521 22 5C22 4.73478 21.8946 4.48043 21.7071 4.29289C21.5196 4.10536 21.2652 4 21 4H11C10.7348 4 10.4804 4.10536 10.2929 4.29289C10.1054 4.48043 10 4.73478 10 5C10 5.26521 10.1054 5.51957 10.2929 5.7071C10.4804 5.89464 10.7348 6 11 6Z" fill="#40189D"></path>
+                                                <path d="M21 8H11C10.7348 8 10.4804 8.10536 10.2929 8.29289C10.1054 8.48043 10 8.73478 10 9C10 9.26521 10.1054 9.51957 10.2929 9.7071C10.4804 9.89464 10.7348 10 11 10H21C21.2652 10 21.5196 9.89464 21.7071 9.7071C21.8946 9.51957 22 9.26521 22 9C22 8.73478 21.8946 8.48043 21.7071 8.29289C21.5196 8.10536 21.2652 8 21 8Z" fill="#40189D"></path>
+                                                <path d="M18 12H11C10.7348 12 10.4804 12.1054 10.2929 12.2929C10.1054 12.4804 10 12.7348 10 13C10 13.2652 10.1054 13.5196 10.2929 13.7071C10.4804 13.8947 10.7348 14 11 14H18C18.2652 14 18.5196 13.8947 18.7071 13.7071C18.8946 13.5196 19 13.2652 19 13C19 12.7348 18.8946 12.4804 18.7071 12.2929C18.5196 12.1054 18.2652 12 18 12Z" fill="#40189D"></path>
+                                             </svg>
+                                          </span>
+                                          Newest
+                                       </button>
+                                       <div class="dropdown-menu">
+                                          <a class="dropdown-item" href="#">Link 1</a>
+                                          <a class="dropdown-item" href="#">Link 2</a>
+                                          <a class="dropdown-item" href="#">Link 3</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12">
+                           <div class="searchTable">
+                              <div class="table-responsive">
+                                 <table class="table">
+                                    <thead>
+                                       <tr>
+                                          <th>Job Title</th>
+                                          <th>Candidates</th>
+                                          <th>Job Status</th>
+                                          <th>Actions</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td><a href="view-job-post">Science Teacher</a></td>
+                                          <td>
+                                             <span><a href="">0 Active <br> Candidates</a></span>
+                                             <span>0 <br> Awaiting</span>
+                                             <span>0 <br> Reviewed</span>
+                                             <span>0 <br> Contacting</span>
+                                             <span>0 <br> Shortlisted</span>
+                                             <span>0 of 1 <br> <a href="#">Hired</a></span>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Job Status</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Actions</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><a href="view-job-post">Social Studies Teacher</a></td>
+                                          <td>
+                                             <span><a href="#">9 Active <br> Candidates</a></span>
+                                             <span>0 <br> Awaiting</span>
+                                             <span>6 <br><a href="#">Reviewed</a></span>
+                                             <span>0 <br> Contacting</span>
+                                             <span>3 <br> <a href="#">Shortlisted</a></span>
+                                             <span>0 of 1 <br> <a href="#">Hired</a></span>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Job Status</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Actions</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><a href="view-job-post">Punjabi Teacher</a></td>
+                                          <td>
+                                             <span><a href="#">10 Active <br> Candidates</a></span>
+                                             <span>5 <br> <a href="#">Awaiting</a></span>
+                                             <span>5<br><a href="#">Reviewed</a></span>
+                                             <span>0 <br> Contacting</span>
+                                             <span>0<br> <a href="#">Shortlisted</a></span>
+                                             <span>0 of 1 <br> <a href="#">Hired</a></span>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Job Status</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Actions</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><a href="view-job-post">Punjabi Teacher</a></td>
+                                          <td>
+                                             <span><a href="#">10 Active <br> Candidates</a></span>
+                                             <span>5 <br> <a href="#">Awaiting</a></span>
+                                             <span>5<br><a href="#">Reviewed</a></span>
+                                             <span>0 <br> Contacting</span>
+                                             <span>0<br> <a href="#">Shortlisted</a></span>
+                                             <span>0 of 1 <br> <a href="#">Hired</a></span>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Job Status</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Actions</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><a href="view-job-post">Punjabi Teacher</a></td>
+                                          <td>
+                                             <span><a href="#">10 Active <br> Candidates</a></span>
+                                             <span>5 <br> <a href="#">Awaiting</a></span>
+                                             <span>5<br><a href="#">Reviewed</a></span>
+                                             <span>0 <br> Contacting</span>
+                                             <span>0<br> <a href="#">Shortlisted</a></span>
+                                             <span>0 of 1 <br> <a href="#">Hired</a></span>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Job Status</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Actions</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><a href="view-job-post">Punjabi Teacher</a></td>
+                                          <td>
+                                             <span><a href="#">10 Active <br> Candidates</a></span>
+                                             <span>5 <br> <a href="#">Awaiting</a></span>
+                                             <span>5<br><a href="#">Reviewed</a></span>
+                                             <span>0 <br> Contacting</span>
+                                             <span>0<br> <a href="#">Shortlisted</a></span>
+                                             <span>0 of 1 <br> <a href="#">Hired</a></span>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Job Status</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <select class="form-control">
+                                                <option value="0" selected>Actions</option>
+                                                <option value="0">Open</option>
+                                                <option value="0">Closed</option>
+                                                <option value="0">Paused</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12">
+                           <div class="searchPagination">
+                              <ul class="pagination pagination-gutter">
+                                 <li class="page-item page-indicator">
+                                    <a class="page-link" href="javascript:void()">
+                                    <i class="fa fa-angle-left"></i></a>
+                                 </li>
+                                 <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                                 </li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                                 <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                                 <li class="page-item page-indicator">
+                                    <a class="page-link" href="javascript:void()">
+                                    <i class="fa fa-angle-right"></i></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+{% endblock %}
