@@ -1,5 +1,10 @@
-from django.urls import path
+"""
+Script to Define the urls related to school
+"""
+# pylint: disable=import-error
+# pylint: disable=invalid-name
 
+from django.urls import path
 from .views import (
     SchoolDashboard,
     SchoolProfiles,
