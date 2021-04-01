@@ -291,9 +291,9 @@
 		                                         <label>Primary Subject you teach?</label> 
 		                                         <select class="form-control">
 		                                            <option value="0">Choose Subjects</option>
-		                                            <option value="0">Science</option>
-		                                            <option value="0">Maths</option>
-		                                            <option value="0">English</option>
+		                                            {% for subj in Subjects %}
+		                                            <option value="{{subj.id}}">{{subj.code}}</option>
+		                                            {% endfor %}
 		                                         </select>
 		                                      </div>
 		                                   </div>
