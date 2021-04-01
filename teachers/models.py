@@ -149,3 +149,51 @@ class SideBarMenus(BaseModel):
 	active = models.IntegerField(null=True, blank=True)
 	class Meta:
 		db_table = 'sidebar_menus'
+
+
+class GlobalCodes(BaseModel):
+	category = models.CharField(
+		max_length = 255, null=True, blank=True
+	)
+	code = models.CharField(
+		max_length=255, null=True, blank=True
+	)
+	description = models.TextField(
+		null=True, blank=True
+	)
+	active = models.IntegerField(
+		null=True, blank=True
+	)
+
+	class Meta:
+		db_table = 'global_codes'
+
+
+class Country(models.Model):
+	sortname = models.CharField(
+		max_length=255, null=True, blank=True
+	)
+	name = models.CharField(
+		max_length=255, null=True, blank=True
+	)
+	phonecode = models.IntegerField(null=True, blank=True)
+	class Meta:
+		db_table = 'countries'
+
+
+class State(models.Model):
+	name=models.CharField(
+		max_length=100, null=True, blank=True
+	)
+	country_id = models.IntegerField(null=True, blank=True)
+	class Meta:
+		db_table = 'state'
+
+
+class Districts(models.Model):
+	name= models.CharField(
+		max_length=50, null=True, blank=True
+	)
+	state_id = models.IntegerField(null=True, blank=True)
+	class Meta:
+		db_table = 'districts'

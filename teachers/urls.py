@@ -10,6 +10,8 @@ from .views import (
     TeacherProfile,
     TeacherSearchJob,
     TeachaerTrackJob,
+    GetDistrict,
+    TeacherProfileUpdate,
 )
 
 
@@ -33,5 +35,13 @@ urlpatterns = [
         'track_job/',
         TeachaerTrackJob.as_view(),
         name='teacher_track_job'
+    ),
+    path("get_district/",
+        GetDistrict.as_view(),
+        name="get_district"
+    ),
+    path("profile/update/",
+        TeacherProfileUpdate.as_view(),
+        name="get_district"
     ),
 ]
