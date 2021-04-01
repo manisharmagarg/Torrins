@@ -61,6 +61,9 @@ class TeacherProfile(LoginRequiredMixin, View):
 		self.context["Marital_Status"] = GlobalCodes.objects.filter(
 			category="MaritalStatus"
 		)
+		self.context["Subjects"] = GlobalCodes.objects.filter(
+			category="subject"
+		)
 		self.context["Country"] = Country.objects.all()
 		self.context["States"] = State.objects.filter(country_id=101)
 		return render(
