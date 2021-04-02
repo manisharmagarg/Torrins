@@ -113,10 +113,9 @@
 	                    										<label>Years of Experience</label>
 	                    										<select class="form-control" name="total_experience">
 	                    											<option value="0">Select Experience</option>
-	                    											<option value="0">0 years</option>
-	                    											<option value="0">1 years</option>
-	                    											<option value="0">2 years</option>
-	                    											<option value="0">3 years</option>
+	                    											{% for exp in ExperienceYears %}
+	                    											<option {% if profile.experience_years == exp%} selected="selected" {% endif %} value="{{exp}}">{{exp}}</option>
+	                    											{% endfor %}
 	                    										</select>
 	                    									</div>
 	                    								</div>
@@ -136,10 +135,9 @@
 	                    										<label>Number of Children</label>
 	                    										<select class="form-control", name="children">
 	                    											<option value="0">Select Children</option>
-	                    											<option value="0">0</option>
-	                    											<option value="0">1</option>
-	                    											<option value="0">2</option>
-	                    											<option value="0">3</option>
+	                    											{% for child in Children %}
+	                    											<option {% if profile.children == child %} selected="selected" {% endif %} value="{{child}}">{{child}}</option>
+	                    											{% endfor %}
 	                    										</select>
 	                    									</div>
 	                    								</div>
@@ -301,21 +299,10 @@
 		                                      <div class="form-group">
 		                                         <label>Select the Standards taught</label> 
 		                                         <div class="selecttaught">
-		                                            <div class="selectStandard"><a href="#">Pre-Nursery</a></div>
-		                                            <div class="selectStandard"><a href="#">Nursery</a></div>
-		                                            <div class="selectStandard"><a href="#">Kindergarten </a></div>
-		                                            <div class="selectStandard"><a href="#">1st Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">2nd Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">3rd Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">4th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">5th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">6th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">7th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">8th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">9th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">10th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">11th Standard</a></div>
-		                                            <div class="selectStandard"><a href="#">12th Standard</a></div>
+		                                         	{% for class in Classes %}
+		                                            <div class="selectStandard"><a href="#" value="{{class.id}}" >{{class.code}}</a></div>
+		                                            {% endfor %}
+
 		                                         </div>
 		                                      </div>
 		                                   </div>
@@ -1420,7 +1407,7 @@
          <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                <div class="modal-header">
-                  <h4 class="modal-title">Add Employment</h4>
+                  <h4 class="modal-title">Add Previous Employment</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                </div>
                <div class="modal-body">
@@ -1449,35 +1436,34 @@
                      </div>
                      <div class="col-sm-12">
                         <div class="form-group">
-                           <label>Position Held</label> 
+                           <label>Primary Subject you taught?</label> 
                            <select class="form-control">
                               <option value="0">Select Position Held</option>
-                              <option value="1">PRT – Primary Teacher </option>
-                              <option value="1"> TGT – Trained Graduate Teacher  </option>
-                              <option value="1">Kindergarten Teacher </option>
-                              <option value="1">Librarian  </option>
+                              {% for subj in Subjects %}
+                              <option value="{{subj.id}}">{{subj.code}}</option>
+                              {% endfor %}
                            </select>
                         </div>
                      </div>
                      <div class="col-sm-12">
                         <div class="form-group">
-                           <label>Classes Taught</label> 
+                           <label>Position Held</label> 
+                           <select class="form-control">
+                              <option value="0">Select Position Held</option>
+                              {% for postion in Positions %}
+                              <option value="{{postion.id}}">{{postion.code}}</option>
+                              {% endfor %}
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="form-group">
+                           <label>Classes Taught</label>
+                           <input type="hidden" name="Classes" value="">
                            <div class="selecttaught">
-                              <div class="selectStandard"><a href="#">Pre-Nursery</a></div>
-                              <div class="selectStandard"><a href="#">Nursery</a></div>
-                              <div class="selectStandard"><a href="#">Kindergarten </a></div>
-                              <div class="selectStandard"><a href="#">1st Standard</a></div>
-                              <div class="selectStandard"><a href="#">2nd Standard</a></div>
-                              <div class="selectStandard"><a href="#">3rd Standard</a></div>
-                              <div class="selectStandard"><a href="#">4th Standard</a></div>
-                              <div class="selectStandard"><a href="#">5th Standard</a></div>
-                              <div class="selectStandard"><a href="#">6th Standard</a></div>
-                              <div class="selectStandard"><a href="#">7th Standard</a></div>
-                              <div class="selectStandard"><a href="#">8th Standard</a></div>
-                              <div class="selectStandard"><a href="#">9th Standard</a></div>
-                              <div class="selectStandard"><a href="#">10th Standard</a></div>
-                              <div class="selectStandard"><a href="#">11th Standard</a></div>
-                              <div class="selectStandard"><a href="#">12th Standard</a></div>
+                           		{% for class in Classes %}
+                           		<div class="selectStandard"><a href="#" value="{{class.id}}" >{{class.code}}</a></div>
+                           		{% endfor %}
                            </div>
                         </div>
                      </div>
@@ -1569,5 +1555,8 @@
 
 	<script src="/static/assets/js/custom.js"></script>
 	<script src="/static/assets/js/teachers_customs.js"></script>
+	<script>
+		
+	</script>
 
 {% endblock %}

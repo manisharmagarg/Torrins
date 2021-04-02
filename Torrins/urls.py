@@ -24,3 +24,7 @@ urlpatterns = [
     path("teacher/", include('teachers.urls')),
     path("school/", include('school.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+admin.site.site_header = "Torrins Admin"
+admin.site.site_title = "Torrins Admin Portal"
+admin.site.index_title = "Welcome to Torrins Portal"

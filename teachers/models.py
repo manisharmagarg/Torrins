@@ -197,3 +197,112 @@ class Districts(models.Model):
 	state_id = models.IntegerField(null=True, blank=True)
 	class Meta:
 		db_table = 'districts'
+
+
+class TeacherEducation(BaseModel):
+	insitution_college = models.CharField(
+		max_length = 255,
+		null=True,
+		blank=True
+	)
+	degree_type = models.BigIntegerField(
+		null=True, blank=True
+	)
+	school_board = models.IntegerField(
+		null=True, blank=True
+	)
+	university = models.CharField(
+		max_length=255,
+		blank=True,
+		null=True
+	)
+	mediums = models.CharField(
+		max_length=255,
+		blank=True,
+		null=True
+	)
+	passing_year = models.IntegerField(
+		null=True,
+		blank=True
+	)
+	city = models.CharField(
+		max_length=255,
+		blank=True,
+		null=True
+	)
+	description = models.TextField(
+		blank=True,
+		null=True
+	)
+	user = models.ForeignKey(
+		User,
+		on_delete=models.CASCADE,
+		null=True,
+		blank=True
+	)
+	active = models.IntegerField(
+		null=True, blank=True
+	)
+	class Meta:
+		db_table = 'education'
+
+
+class TeacherEmployments(BaseModel):
+	school = models.CharField(
+		max_length=255,
+		blank=True,
+		null=True
+	)
+	location = models.CharField(
+		max_length=255,
+		blank=True,
+		null=True
+	)
+	country = models.BigIntegerField(
+		blank=True,
+		null=True
+	)
+	postion = models.BigIntegerField(
+		blank=True,
+		null=True
+	)
+	classes = models.TextField(
+		blank=True,
+		null=True
+	)
+	primary_subject = models.IntegerField(
+		blank=True,
+		null=True
+	)
+	subjects = models.TextField(
+		blank=True,
+		null=True
+	)
+	from_date = models.DateField(
+		blank=True,
+		null=True
+	)
+	to_date = models.DateField(
+		blank=True,
+		null=True
+	)
+	currently_working = models.IntegerField(
+		blank=True,
+		null=True
+	)
+	description = models.TextField(
+		blank=True,
+		null=True
+	)
+	user = models.ForeignKey(
+		User,
+		on_delete=models.CASCADE,
+		null=True,
+		blank=True
+	)
+	active = models.IntegerField(
+		blank=True,
+		null=True
+	)
+	class Meta:
+		db_table = 'employments'

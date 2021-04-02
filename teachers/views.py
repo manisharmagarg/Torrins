@@ -61,11 +61,17 @@ class TeacherProfile(LoginRequiredMixin, View):
 		self.context["Marital_Status"] = GlobalCodes.objects.filter(
 			category="MaritalStatus"
 		)
+		self.context["Country"] = Country.objects.all()
+		self.context["States"] = State.objects.filter(country_id=101)
+		self.context["ExperienceYears"] = [str(x) for x in range(1, 31)]
+		self.context["Children"] = [x for x in range(0, 11)]
 		self.context["Subjects"] = GlobalCodes.objects.filter(
 			category="subject"
 		)
-		self.context["Country"] = Country.objects.all()
-		self.context["States"] = State.objects.filter(country_id=101)
+		self.context["Classes"] = GlobalCodes.objects.filter(
+			category="Classes"
+		)
+
 		return render(
 			request, "teacher/teacher_profile.html", self.context
 		)

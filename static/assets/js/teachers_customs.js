@@ -55,6 +55,31 @@ function formDataTeacher() {
 	});
 }
 
+
+
+$(document).ready(function() {
+	var Standards = [];
+	$("div.selectStandard a").click(function () {
+		var Input = $(this).parent('.selectStandard').parent('.selecttaught').siblings('input');
+		Standards = Input.val() ? JSON.parse("[" + Input.val() + "]") : [];
+		let Anchor = $(this).attr('value');
+		console.log(Anchor);
+
+		if ($(this).hasClass("active")) {
+			$(this).removeClass("active");
+			Standards = $.grep(Standards, function (value) {
+				return value != Anchor;
+			});
+			Input.val(Standards.toString());
+		} else {
+			$(this).addClass("active");
+			Standards.push($(this).attr('value'));
+			Input.val(Standards.toString());
+		}
+	});
+});
+
+
 // $.when($.ajax(form[0].method,
 	// 	$(formElements).serialize(),
 	// 	form[0].action
